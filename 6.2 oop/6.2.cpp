@@ -9,7 +9,7 @@ int main() {
     GPSLocation loc1{ 10.0, 20.0 };
     GPSLocation loc2{ 30.0, 40.0 };
 
-    array.add(new Car(30, 100, loc1, loc2, "http://example.com"));
+    array.add(new Car(30, 100, loc1, loc2, "example.com"));
     array.add(new Bus(50, 200, loc1, loc2));
     array.add(new Taxi(40, 150, loc1, loc2));
 

@@ -30,7 +30,7 @@ public:
     RoutesArray(const RoutesArray& other) : routes(nullptr), size(other.size), capacity(other.capacity) {
         routes = new Route * [capacity];
         for (int i = 0; i < size; ++i) {
-            routes[i] = other.routes[i]->clone();
+            routes[i] = other.routes[i];
         }
     }
 
@@ -51,7 +51,7 @@ public:
             capacity = other.capacity;
             routes = new Route * [capacity];
             for (size_t i = 0; i < size; ++i) {
-                routes[i] = other.routes[i]->clone();
+                routes[i] = other.routes[i];
             }
         }
         return *this;
@@ -99,7 +99,7 @@ public:
 
     void print() const {
         for (int i = 0; i < size; ++i) {
-            cout << *routes[i] << std::endl;
+            cout << *routes[i] << endl;
         }
     }
 
